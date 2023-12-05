@@ -1,0 +1,224 @@
+main{
+    padding-top: 100px;
+}
+/* ===================== 레시피 상단 ========================= */
+.recipe_header{
+    width: 100%;
+    position: relative;
+    font-family: NotoSansKR;
+    font-weight: 700;
+    overflow: hidden;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #25282d;
+}
+.sec_L{
+    width: 60%;
+    float: left;
+    padding-top: 100px;
+}
+.sec_L .img_box{
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 0px 8px 1px #24282b;
+    margin-left: 100px;
+    font-size: 0;
+}
+.img_box img{
+    width: 100%;
+}
+.txt_box{
+    width: 100%;
+    padding-top: 100px;
+}
+.sub_title{
+    font-size: 16px;
+    padding: 5px 0;
+}
+.title{
+    font-size: 26px;
+    padding: 5px 0;
+    font-weight: 900;
+    font-family: 'Miwon';
+}
+.recipe_info{
+    font-size: 13px;
+    padding: 5px 0 30px;
+    color: #444;
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid #999;
+}
+.recipe_info .view_note:hover{
+    cursor: pointer;
+    color: tomato;
+}
+.coment{
+    font-size: 18px;
+    padding: 30px 0;
+}
+.sec_R{
+    width: calc(40% - 30px);
+    min-height: 1000px;
+    margin-left: 30px;
+    float: right;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: #23272a21;
+}
+.sec_R_header{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-family: 'incheon';
+    font-size: 40px;
+    font-weight: 900;
+    border-bottom: 1px solid #999;
+}
+.sec_R_main{
+    width: 100%;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.ingredient{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    overflow: hidden;
+}
+.ingredient_name{
+    float: left;
+}
+.ingredient_count{
+    float: right;
+}
+.cart_link{
+    width: 110px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    float: right;
+    border: 1px solid;
+    margin: 30px 10px;
+}
+.cart_link:hover a{
+    background-color: #25282d;
+    color: #fff;
+}
+.cart_link a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.app_ad{
+    width: 100%;
+    padding-top: 40px;
+}
+.app_ad img{
+    width: 100%;
+    cursor: pointer;
+}
+/* ==================== 레시피 하단 ===================== */
+.recipe_main{
+    width: 100%;
+    max-width: 900px;
+    padding-top: 50px;
+    margin: 0 auto;
+    font-family: NotoSansKR;
+
+}
+.recipe_main .deco{
+    width: 110px;
+}
+.recipe_main article{
+    width: 100%;
+    height: 300px;
+    margin: 70px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+article .art_img_box{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: #999;
+    font-size: 0;
+    text-align: center;
+}
+.art_img_box img{
+    width: 100%;
+}
+.art_txt_box{
+    width: 60%;
+    height: 100%;
+}
+.art_txt_box .step{
+    padding: 15px 0;
+    font-size: 25px;
+    font-weight: 900;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.art_txt_box .txt{
+    padding: 10px 0;
+    font-size: 17px;
+    font-weight: 700;
+}
+@media screen and (max-width: 810px){
+    .sec_L {
+        width: 60%;
+    }
+    .sec_L .img_box {
+        max-width: 300px;
+    }
+    .sub_title {
+        font-size: 13px;
+    }
+    .title {
+        font-size: 23px;
+    }
+    .recipe_info {
+        font-size: 11px;
+    }
+    .coment {
+        font-size: 15px;
+    }
+    .cart_link {
+        width: 90px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 710px){
+    .sec_L .img_box {
+        max-width: 260px;
+        margin-left: 50px;
+    }
+    .sec_R {
+        padding: 0;
+    }
+    .recipe_main article {
+        flex-direction: column;
+        height: 410px;
+    }
+    article .art_img_box {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 500px){
+    
+    .sec_L .img_box {
+        max-width: 300px;
+        margin-left: 50px;
+    }
+    .sec_L {
+        width: 100%;
+    }
+    .sec_R {
+        width: 100%;
+        padding: 0 20px;
+    }
+}

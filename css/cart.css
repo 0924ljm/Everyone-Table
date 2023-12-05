@@ -1,0 +1,254 @@
+main{
+    padding-top: 50px;
+    font-family: NotoSansKR;
+}
+.cart .deco{
+    width: 100px;
+}
+.cart_container{
+    overflow: hidden;
+    position: relative;
+}
+.cart_item_list{
+    width: 55%;
+    float: left;
+}
+.cart_item_list_header{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid;
+    padding: 0 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart_item_list_header .L{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.all_checkmark{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #777;
+    cursor: pointer;
+}
+.checkmark{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #777;
+    cursor: pointer;
+}
+.cart .chkActive{
+    background-color: tomato;
+    color: #fff;
+}
+.check_remove_btn{
+    color: #666;
+    cursor: pointer;
+}
+.item_box{
+    width: 100%;
+    height: 90px;
+    margin-top: 40px;
+    padding: 10px;
+    border-bottom: 1px solid;
+    box-sizing: border-box;
+    position: relative;
+}
+.item_box .checkmark{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+.item_box .box1{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    gap: 7px;
+}
+.item_box .box2{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    gap: 5px;
+}
+.item_name{
+    font-size: 22px;
+    font-weight: 700;
+}
+.count_box{
+    width: 100px;
+    height: 31px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item_count_btn{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 900;
+    border: 1px solid;
+    cursor: pointer;
+}
+.item_count{
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    border: none;
+    outline: 1px solid #888;
+}
+input::-webkit-inner-spin-button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+.total_info_box{
+    width: 340px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+}
+.total_info_header{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    border-bottom: 3px solid ;
+}
+.total_info{
+    width: 100%;
+    height: 150px;
+    font-weight: 500;
+    border-bottom: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.item_total_price{
+    display: flex;
+    justify-content: space-between;
+}
+.delivery_charge{
+    display: flex;
+    justify-content: space-between;
+}
+.delivery_charge span{
+    font-size: 14px;
+    font-weight: 300;
+    color: #444;
+}
+.final_price{
+    width: 100%;
+    height: 100px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: tomato;
+}
+.price_num{
+    font-size: 20px;
+    font-weight: 700;
+}
+.pay_btn{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 23px;
+    font-weight: 700;
+    background-color: #25282d;
+    color: #fff;
+    cursor: pointer;
+}
+.pay_btn:hover{
+    color: tomato;
+}
+/* ========================== 반응형 =============================== */
+@media screen and (max-width: 900px){
+    .total_info_box {
+        width: 290px;
+    }
+    .total_info_header {
+        height: 30px;
+        line-height: 30px;
+        font-size: 18px;
+    }
+    .total_info {
+        height: 110px;
+    }
+    .price_num {
+        font-size: 15px;
+    }
+    .final_price {
+        height: 50px;
+    }
+    .pay_btn {
+        height: 50px;
+        line-height: 50px;
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 750px){
+    .cart_item_list {
+        width: 45%;
+        font-size: 13px;
+    }
+    .item_box {
+        height: 70px;
+        margin-top: 10px;
+    }
+    .item_box .item_name {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 600px){
+    .cart_item_list {
+        width: 100%;
+        font-size: 13px;
+    }
+    .total_info_box {
+        width: 100%;
+        position: static;
+        height: 270px;
+        background-color: #fff;
+        float: left;
+        margin-top: 100px;
+    }
+    footer {
+        margin-top: 50px;
+    }
+}

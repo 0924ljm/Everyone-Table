@@ -1,0 +1,607 @@
+@font-face {
+    font-family: 'incheon';
+    src: url('../fonts/incheon/인천교육소통.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Miwon';
+    src: url('../fonts/미원Miwon.otf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    src: url('../fonts/Noto_Sans_KR/NotoSansKR-Black.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    src: url('../fonts/Noto_Sans_KR/NotoSansKR-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    src: url('../fonts/Noto_Sans_KR/NotoSansKR-Medium.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    src: url('../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    src: url('../fonts/Noto_Sans_KR/NotoSansKR-Light.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    src: url('../fonts/Noto_Sans_KR/NotoSansKR-Thin.otf');
+    font-weight: 100;
+    font-style: normal;
+}
+body{
+    margin: 0;
+    font-family: Miwon;
+}
+#wrap{
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+.w_1400{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.w_1200{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.item_init { 
+    transform: translateY(150px);
+    transition: all 0.5s;
+    transition-timing-function: linear;
+    opacity: 0;
+}
+.item_init_active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.sec_title{
+    width: 100%;
+    height: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: incheon;
+    font-size: 22px;
+    font-weight: 900;
+    color: #000;
+    position: relative;
+}
+.deco{
+    width: 250px;
+    height: 20px;
+    border-left: 3px solid tomato;
+    border-right: 3px solid tomato;
+    box-sizing: border-box;
+    position: absolute;
+}
+.sec_title h1{
+    padding: 0 30px;
+    font-size: 1.5em;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #25282d;
+}
+/* ============================헤더================================== */
+header{
+    width: 100%;
+    background: url(../img/포폴/head_bg.jpg) no-repeat top center;
+    background-size: 100% 100vh;
+    position: relative;
+}
+header .w_1400{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.h_top{
+    height: 70px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+.logo{
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+    font-family: incheon;
+    font-size: 38px;
+    font-weight: 900;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header_R{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px
+}
+.search{
+    width: 250px;
+    position: relative;
+}
+.search .h_search{
+    width: 100%;
+    height: 30px;
+    padding: 0 40px 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.search svg{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.cart_icon{
+    width: 35px;
+    height: 35px;
+    background-color: #999;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.cart_count{
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: tomato;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    z-index: 99;
+}
+.cart_icon svg{
+    transform: rotatey(180deg);
+}
+/* ================== 로그인 ========================= */
+.login{
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+}
+.login span{
+    width: 100%;
+    height: 100%;
+}
+.open_popup{
+    display: block;
+}
+.success_login{
+    display: none;
+    position: relative;
+}
+.my_page{
+    width: 280px;
+    height: 480px;
+    border: 1px solid;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+    font-family: NotoSansKR;
+    cursor: default;
+    display: none;
+    position: absolute;
+    top: 150%;
+    right: 0;
+    z-index: 9999;
+}
+.my_page_header{
+    width: 100%;
+    height: 50px;
+    /* background-color: wheat; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid tomato;
+}
+.my_page_header img{
+    width: 35px;
+}
+.my_page_item{
+    display: flex;
+}
+.my_page_item .point,
+.my_page_item .cupon{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 0.2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.my_page_item span{
+    color: tomato;
+}
+.my_page_li{
+    width: 100%;
+}
+.my_page_li div{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.my_page_li div:hover{
+    color: tomato;
+}
+.logout_btn{
+    display: inline-block;
+    line-height: 60px;
+    font-size: 13px;
+    color: #999;
+    cursor: pointer;
+}
+.logout_btn:hover{
+    color: tomato;
+}
+.popup_pan{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    display: none;
+    cursor: default;
+}
+.login_popup{
+    width: 50%;
+    aspect-ratio: 5/4;
+    max-width: 500px;
+    min-width: 300px;
+    background-color: #fff;
+    border: 5px solid tomato;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999999999;
+    transform: translate(-50%, -50%);
+    cursor: default;
+    display: none;
+}
+.popup_close_btn{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #25282d;
+    cursor: pointer;
+}
+.popup_header div{
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    font-size: 70px;
+    font-family: incheon;
+    color: #25282d;
+}
+.login_form{
+    display: block;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.alert_box{
+    width: 100%;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: tomato;
+    font-family: none;
+    font-size: 12px;
+}
+.popup_input{
+    width: 90%;
+    height: 50px;
+    box-sizing: border-box;
+    border-style: none;
+    outline: none;
+}
+.user_ID,.user_PW{
+    border-bottom: 2px solid tomato;
+}
+.submit{
+    background-color: #25282d;
+    font-family: Miwon;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+.submit:hover{
+    color: tomato;
+    cursor: pointer;
+}
+
+/* ====================== 메뉴 ========================== */
+.nav{
+    width: 100%;
+    height: 50px;
+}
+.nav .w_1400{
+    display: flex;
+    justify-content: center;
+}
+.nav_ul{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+.nav_menu {
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    padding: 0 30px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+}
+.hover_color{
+    color: #fff;
+    text-shadow: 1px 1px 2px tomato;
+}
+.click_color{
+    color: tomato;
+}
+.nav_li_bar{
+    width: 48px;
+    height: 3px !important;
+    box-shadow: 0 1px 4px 0 tomato;
+    background-color: tomato;
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    transition: all 0.2s;
+}
+
+
+
+/* =================== 푸터 ==================== */
+footer{
+    width: 100%;
+    margin-top: 150px;
+    border-top: 1px solid #888;
+    box-sizing: border-box;
+    background-color: #25282d;
+    font-family: NotoSansKR;
+    color: #fff;
+    font-weight: 100;
+}
+.customer_center{
+    width: 100%;
+    position: relative;
+}
+.customer_center_title{
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    font-weight: 500;
+}
+footer .btn_box{
+    display: flex;
+    gap: 50px;
+    margin: 20px 0;
+}
+footer .btn{
+    width: 150px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #25282d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .btn:hover{
+    background-color: #999;
+    cursor: pointer;
+}
+footer .service{
+    width: 100%;
+    height: 40px;
+    background-color: #99999947;
+    margin: 10px 0;
+}
+footer .service .w_1400{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.service .w_1400 div{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer_bot .w_1400 div{
+    padding: 10px 0;
+    display: flex;
+    gap: 20px;
+}
+.footer_link_box{
+    width: 400px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 70px;
+    right: 50px;
+}
+.footer_link_box img{
+    width: 70px;
+    cursor: pointer;
+}
+
+
+
+/* =================== 탑버튼 ====================== */
+.top_btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #25282d;
+    box-shadow: 0 0 2px 0 #fff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: none;
+}
+.top_btn:hover{
+    background-color: #fff;
+    color: #25282d;
+    box-shadow: 0 0 2px 0 #25282d;
+    cursor: pointer;
+}
+/* ========================== 반응형 =============================== */
+@media screen and (max-width: 850px){
+    header .w_1400{
+        justify-content: space-around;
+    }
+    .logo{
+        position: static;
+        transform: translate(0, 0);
+    }
+    .nav_ul{
+        width: 100%;
+        gap: 0;
+    }
+    footer{
+        font-size: 11px;
+        margin-top: 90px;
+    }
+    footer .btn {
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .footer_link_box {
+        width: 290px;
+        height: 40px;
+        gap: 0px;
+        top: 65px;
+        right: 0px;
+    }
+}
+@media screen and (max-width: 625px){
+    .nav_ul {
+        justify-content: space-between;
+    }
+    .nav_menu{
+        padding: 0 10px;
+    }
+}
+@media screen and (max-width: 500px){
+    .search {
+        width: 180px;
+    }
+}
+@media screen and (max-width: 400px){
+    header .w_1400 {
+        justify-content: space-between;
+    }
+    .search {
+        display: none;
+    }
+    .logo {
+        font-size: 19px;
+    }
+    .cart_icon {
+        width: 25px;
+        height: 25px;
+    }
+    .cart_count {
+        width: 11px;
+        height: 11px;
+        line-height: 11px;
+        font-size: 8px;
+    }
+    .cart_icon svg {
+        width: 17px;
+    }
+    .login {
+        font-size: 13px;
+    }
+    .nav_menu {
+        font-size: 11px;
+        padding: 0 5px;
+    }
+}
